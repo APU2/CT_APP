@@ -48,7 +48,7 @@ ui <- dashboardPage(
           ),
           dashboardBody(
                     h1("Key theoretical disinfection parameters"),
-                    h5("Set the dose, pH, temperature, flow, tank volume and source type"),
+                    h3("Select the dose, pH, temperature, flow, tank volume and source type using the menu on the left. Key disinfection parameters will be calculated and the pH-adjusted CT value will be calculated below"),
                     # Boxes need to be put in a row (or column)
                     fluidRow(
                               valueBoxOutput("rtime"),
@@ -58,7 +58,15 @@ ui <- dashboardPage(
                     fluidRow(
                               #valueBoxOutput("CT"),
                               valueBoxOutput("ph_cor_ct")
-                    )
+                    ),
+                    h4("This application is provided to illustrate the impact of pH variation on disinfection performance. Theoretical residence time is not a substitute for the calculation of the emprical residence time distribution as short-circuiting may occur within the contact tank."),
+                    h4("Contact:"),
+                    h5("Any questions regarding the use of this application please contact a.upton@cranfield.ac.uk"),
+                    h5("Any questions regarding chlorine disinfection r.a.cheswick@cranfield.ac.uk"),
+                    h3("References"),
+                    h5("White’s Handbook of Chlorination and Alternative Disinfectants. (2009). Hoboken, NJ, USA: John Wiley & Sons, Inc. doi:10.1002/9780470561331"),
+                    h5(citation("shiny")),
+                    h5(citation("shinydashboard"))
           )
 )
 
