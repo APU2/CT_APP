@@ -48,7 +48,7 @@ ui <- dashboardPage(
           ),
           dashboardBody(
                     h1("Key theoretical disinfection parameters"),
-                    h3("Select the dose, pH, temperature, flow, tank volume and source type using the menu on the left. Key disinfection parameters will be calculated and the pH-adjusted CT value will be calculated below"),
+                    h3("Select the dose, pH, temperature, flow, tank volume and source type using the menu on the left. Key disinfection parameters will be calculated and the pH-adjusted CT value will be displayed below"),
                     # Boxes need to be put in a row (or column)
                     fluidRow(
                               valueBoxOutput("rtime"),
